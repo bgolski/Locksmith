@@ -14,8 +14,6 @@
 		8E3B4D5922023CD400FF0C7E /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3B4D5822023CD400FF0C7E /* StatsViewController.swift */; };
 		8E3BACC22202102600606C49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E3BACC12202102600606C49 /* GoogleService-Info.plist */; };
 		A605C9D81BB3F06600E9497F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605C9D71BB3F06600E9497F /* AppDelegate.swift */; };
-		A605C9DC1BB3F06600E9497F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605C9DB1BB3F06600E9497F /* GameScene.swift */; };
-		A605C9DE1BB3F06600E9497F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605C9DD1BB3F06600E9497F /* GameViewController.swift */; };
 		A605C9E11BB3F06600E9497F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A605C9DF1BB3F06600E9497F /* Main.storyboard */; };
 		A605C9E31BB3F06600E9497F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A605C9E21BB3F06600E9497F /* Assets.xcassets */; };
 		A605C9E61BB3F06600E9497F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A605C9E41BB3F06600E9497F /* LaunchScreen.storyboard */; };
@@ -57,8 +55,6 @@
 		9D4E76E06D3319BAC85BA627 /* Pods-LocksmithTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocksmithTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocksmithTests/Pods-LocksmithTests.release.xcconfig"; sourceTree = "<group>"; };
 		A605C9D41BB3F06600E9497F /* Locksmith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locksmith.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A605C9D71BB3F06600E9497F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A605C9DB1BB3F06600E9497F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		A605C9DD1BB3F06600E9497F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A605C9E01BB3F06600E9497F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A605C9E21BB3F06600E9497F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A605C9E51BB3F06600E9497F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,6 +100,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E01987C2203EB6400658D81 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A605CA0B1BB45F4200E9497F /* MenuViewController.swift */,
+				8E3B4D5822023CD400FF0C7E /* StatsViewController.swift */,
+				8E01987A2202AC6E00658D81 /* EndlessGameViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		8E3BACBE21FF853900606C49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,17 +160,13 @@
 			isa = PBXGroup;
 			children = (
 				A605C9D71BB3F06600E9497F /* AppDelegate.swift */,
-				A605C9DB1BB3F06600E9497F /* GameScene.swift */,
-				A605C9DD1BB3F06600E9497F /* GameViewController.swift */,
 				A605C9DF1BB3F06600E9497F /* Main.storyboard */,
 				A605C9E21BB3F06600E9497F /* Assets.xcassets */,
 				A605C9E41BB3F06600E9497F /* LaunchScreen.storyboard */,
 				A605C9E71BB3F06600E9497F /* Info.plist */,
 				A605CA091BB42A4C00E9497F /* Extensions.swift */,
-				8E3B4D5822023CD400FF0C7E /* StatsViewController.swift */,
-				A605CA0B1BB45F4200E9497F /* MenuViewController.swift */,
-				8E01987A2202AC6E00658D81 /* EndlessGameViewController.swift */,
 				8E0198782202A6F400658D81 /* EndlessGameScene.swift */,
+				8E01987C2203EB6400658D81 /* View Controllers */,
 				8E3BACC12202102600606C49 /* GoogleService-Info.plist */,
 			);
 			path = Locksmith;
@@ -421,11 +423,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A605C9DC1BB3F06600E9497F /* GameScene.swift in Sources */,
 				8E01987B2202AC6E00658D81 /* EndlessGameViewController.swift in Sources */,
 				A605CA0C1BB45F4200E9497F /* MenuViewController.swift in Sources */,
 				8E0198792202A6F400658D81 /* EndlessGameScene.swift in Sources */,
-				A605C9DE1BB3F06600E9497F /* GameViewController.swift in Sources */,
 				A605C9D81BB3F06600E9497F /* AppDelegate.swift in Sources */,
 				8E3B4D5922023CD400FF0C7E /* StatsViewController.swift in Sources */,
 				A605CA0A1BB42A4C00E9497F /* Extensions.swift in Sources */,

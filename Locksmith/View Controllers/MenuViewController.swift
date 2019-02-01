@@ -17,10 +17,7 @@ class MenuViewController: UIViewController {
     
     
     @IBAction func endlessButtonHandler(_ sender: Any) {
-        let egvc = storyboard?.instantiateViewController(withIdentifier: "endlessGameViewController") as! EndlessGameViewController
-        present(egvc, animated: true, completion: nil)
         performSegue(withIdentifier: "menuToEndless", sender: self)
-        
     }
     
     
