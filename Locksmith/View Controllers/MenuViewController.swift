@@ -10,14 +10,13 @@ import UIKit
 import GoogleMobileAds
 
 class MenuViewController: UIViewController {
-
     
     @IBOutlet weak var bannerView: GADBannerView!
     
     
-    
     @IBAction func endlessButtonHandler(_ sender: Any) {
         performSegue(withIdentifier: "menuToEndless", sender: self)
+        
     }
     
     

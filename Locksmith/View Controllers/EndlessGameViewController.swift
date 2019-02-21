@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import SpriteKit
 import GoogleMobileAds
+import FirebaseDatabase
 
 class EndlessGameViewController: UIViewController, GameDelegate {
     
@@ -36,6 +37,9 @@ class EndlessGameViewController: UIViewController, GameDelegate {
         interstitial.load(request)
         
         shareButton.isHidden = true
+        //BREAKS WHEN IT HITS THIS LINE
+       // let dbRef = Database.database().reference()
+        
         
         
         let scene = EndlessGameScene(size: view.bounds.size)
@@ -57,7 +61,6 @@ class EndlessGameViewController: UIViewController, GameDelegate {
     }
     
     func gameStarted() {
-        snapPic()
         shareButton.isHidden = true
     }
     
@@ -69,6 +72,7 @@ class EndlessGameViewController: UIViewController, GameDelegate {
                 interstitial.present(fromRootViewController: self)
             }
         }
+        snapPic()
     }
     
     override func didReceiveMemoryWarning() {
