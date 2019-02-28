@@ -8,23 +8,31 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+import FirebaseAuth
+
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
         
-            //Initialize Firebase
-        FirebaseApp.configure()
         
         //Initialize AdMob
         GADMobileAds.configure(withApplicationID: "ca-app-pub-3672141075661360~6523589670")
         
+        
         return true
+    }
+    
+    override init() {
+        // Firebase Init
+        FirebaseApp.configure()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

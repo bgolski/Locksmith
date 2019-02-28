@@ -1,0 +1,6 @@
+framework module Pods_LocksmithTests {
+  umbrella header "Pods-LocksmithTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

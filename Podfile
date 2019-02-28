@@ -9,6 +9,8 @@ target 'Locksmith' do
 
   pod 'Firebase/Core'
   pod 'Firebase/AdMob'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
 
   target 'LocksmithTests' do
     inherit! :search_paths
