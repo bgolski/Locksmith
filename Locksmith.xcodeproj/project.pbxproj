@@ -13,6 +13,8 @@
 		8E01987B2202AC6E00658D81 /* EndlessGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01987A2202AC6E00658D81 /* EndlessGameViewController.swift */; };
 		8E3B4D5922023CD400FF0C7E /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3B4D5822023CD400FF0C7E /* StatsViewController.swift */; };
 		8E3BACC22202102600606C49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E3BACC12202102600606C49 /* GoogleService-Info.plist */; };
+		8E85F7BB22204FAD00DD04AC /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85F7BA22204FAD00DD04AC /* UserInfo.swift */; };
+		8E85F7BD2220C50300DD04AC /* UserAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85F7BC2220C50200DD04AC /* UserAds.swift */; };
 		A605C9D81BB3F06600E9497F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605C9D71BB3F06600E9497F /* AppDelegate.swift */; };
 		A605C9E11BB3F06600E9497F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A605C9DF1BB3F06600E9497F /* Main.storyboard */; };
 		A605C9E31BB3F06600E9497F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A605C9E21BB3F06600E9497F /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		8E3B4D5822023CD400FF0C7E /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		8E3BACBF21FF853900606C49 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8E3BACC12202102600606C49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8E85F7BA22204FAD00DD04AC /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		8E85F7BC2220C50200DD04AC /* UserAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAds.swift; sourceTree = "<group>"; };
 		9202845C5468E61E3881DB35 /* Pods-Locksmith.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locksmith.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Locksmith/Pods-Locksmith.debug.xcconfig"; sourceTree = "<group>"; };
 		9D4E76E06D3319BAC85BA627 /* Pods-LocksmithTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocksmithTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocksmithTests/Pods-LocksmithTests.release.xcconfig"; sourceTree = "<group>"; };
 		A605C9D41BB3F06600E9497F /* Locksmith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locksmith.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +125,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E85F7BE2220C77E00DD04AC /* User Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8E85F7BA22204FAD00DD04AC /* UserInfo.swift */,
+				8E85F7BC2220C50200DD04AC /* UserAds.swift */,
+			);
+			path = "User Classes";
+			sourceTree = "<group>";
+		};
 		A164DB5B4C72AFBA2C15FED6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +179,7 @@
 				A605C9E71BB3F06600E9497F /* Info.plist */,
 				A605CA091BB42A4C00E9497F /* Extensions.swift */,
 				8E0198782202A6F400658D81 /* EndlessGameScene.swift */,
+				8E85F7BE2220C77E00DD04AC /* User Classes */,
 				8E01987C2203EB6400658D81 /* View Controllers */,
 				8E3BACC12202102600606C49 /* GoogleService-Info.plist */,
 			);
@@ -379,6 +393,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Locksmith/Pods-Locksmith-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -387,6 +402,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -430,7 +446,9 @@
 				8E0198792202A6F400658D81 /* EndlessGameScene.swift in Sources */,
 				A605C9D81BB3F06600E9497F /* AppDelegate.swift in Sources */,
 				8E3B4D5922023CD400FF0C7E /* StatsViewController.swift in Sources */,
+				8E85F7BB22204FAD00DD04AC /* UserInfo.swift in Sources */,
 				A605CA0A1BB42A4C00E9497F /* Extensions.swift in Sources */,
+				8E85F7BD2220C50300DD04AC /* UserAds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

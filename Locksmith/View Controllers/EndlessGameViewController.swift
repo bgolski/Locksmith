@@ -17,7 +17,7 @@ class EndlessGameViewController: UIViewController, GameDelegate {
     var continueMode: Bool?
     var newImage: UIImage?
     var gamesCompleted = 0;
-    
+
     
     @IBOutlet weak var shareButton: UIButton!
     
@@ -37,11 +37,6 @@ class EndlessGameViewController: UIViewController, GameDelegate {
         interstitial.load(request)
         
         shareButton.isHidden = true
-        //BREAKS WHEN IT HITS THIS LINE
-       // let dbRef = Database.database().reference()
-        
-        
-        
         let scene = EndlessGameScene(size: view.bounds.size)
         // Configure the view.
         let skView = self.view as! SKView
@@ -70,6 +65,9 @@ class EndlessGameViewController: UIViewController, GameDelegate {
         if (gamesCompleted % 2 == 0) {
             if interstitial.isReady {
                 interstitial.present(fromRootViewController: self)
+                interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+                let request = GADRequest()
+                interstitial.load(request)
             }
         }
         snapPic()
