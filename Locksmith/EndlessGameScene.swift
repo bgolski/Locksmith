@@ -7,8 +7,9 @@
 
 import Foundation
 import SpriteKit
-import FirebaseDatabase
+import FirebaseFirestore
 import GoogleMobileAds
+import GameKit
 
 protocol GameDelegate {
     func gameStarted()
@@ -16,7 +17,7 @@ protocol GameDelegate {
 }
 
 
-class EndlessGameScene: SKScene {
+class EndlessGameScene: SKScene, GADRewardBasedVideoAdDelegate {
     var newUser: UserInfo?
     var ads: UserAds?
     var gameDelegate: GameDelegate?
@@ -44,7 +45,15 @@ class EndlessGameScene: SKScene {
     override func didMove(to view: SKView) {
         newUser = UserInfo()
         ads = UserAds()
+        
+        
+    
         layoutGame()
+        
+        gameCompleted = (newUser?.retrieveGamesPlayed())!
+        
+        print("gameCompleted: \(gameCompleted)")
+        
         
     }
     
@@ -66,6 +75,7 @@ class EndlessGameScene: SKScene {
         // -- = -- (32-22)m=(w-ow) (32-22)/(w-ow)=m     w*m = font size
         // 22   ow
 
+        print("height: \(self.frame.height)")
         backgroundColor = SKColor(red: 28.0/255.0, green: 219.0/255.0, blue: 243.0/255.0, alpha: 1.0)
         
 //        safeImage.alpha = 1
@@ -89,8 +99,8 @@ class EndlessGameScene: SKScene {
         scoreLabel.center = CGPoint(x: frame.midX, y: frame.midY)
         scoreLabel.font = UIFont(name: "AvenirNext-Bold", size: 30.0)
         scoreLabel.textColor = UIColor(displayP3Red: 236.0/255.0, green: 240.0/255.0, blue: 241.0/255.0, alpha: 1.0)
-        scoreLabel.text = "Tap!"
-        scoreLabel.frame = CGRect(x: frame.midX, y: frame.midY, width: self.frame.width / 2, height: 53)
+        scoreLabel.text = "Tap to Play!"
+        scoreLabel.frame = CGRect(x: frame.midX, y: frame.midY, width: self.frame.width, height: 53)
         scoreLabel.center = CGPoint(x: frame.midX, y: frame.midY)
         scoreLabel.textAlignment = .center
         
@@ -99,6 +109,12 @@ class EndlessGameScene: SKScene {
         highScoreLabel.position = CGPoint(x: width/2, y: self.frame.height - (self.frame.height * 0.2))
         highScoreLabel.fontColor = SKColor(red: 236.0/255.0, green: 240.0/255.0, blue: 241.0/255.0, alpha: 1.0)
         highScoreLabel.fontSize = CGFloat(20)
+        
+        if let user = self.newUser {
+            if (user.retrieveHighScore() != -1) {
+                self.highScoreLabel.text = "High Score: \(String(describing: user.retrieveHighScore()))"
+            }
+        }
         
         self.addChild(highScoreLabel)
         
@@ -174,7 +190,6 @@ class EndlessGameScene: SKScene {
     
     func newDot() {
         dot = SKShapeNode(circleOfRadius: 15.0)
-//        dot.fillColor = SKColor(red: 31.0/255.0, green: 150.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         dot.fillColor = SKColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 1.0)
         dot.strokeColor = SKColor.clear
         
@@ -183,10 +198,14 @@ class EndlessGameScene: SKScene {
         
         let radian = atan2(dy, dx)
         
-        let startAngle = (clockwise ? 1 : -1) * CGFloat.random(min: radian + 2.0, max: radian + 2.0)
+        let randomFloat =  (CGFloat(Float(arc4random())) / CGFloat(Float(UINT32_MAX)))
         
+        let clockwiseMultiplier = CGFloat(clockwise ? 1 : -1)
+        
+        let startAngle = (clockwiseMultiplier * (randomFloat * 3.14 + 0.6) + radian)
         
         let tempPath = UIBezierPath(arcCenter: CGPoint(x: self.frame.width / 2, y: self.frame.height / 2), radius: 120, startAngle: startAngle, endAngle: startAngle + CGFloat(Double.pi * 2), clockwise: true)
+        
         dot.position = tempPath.currentPoint
         self.addChild(dot)
     }
@@ -197,12 +216,15 @@ class EndlessGameScene: SKScene {
         notification.notificationOccurred(.error)
         
         if let user = self.newUser{
-            if (dots > user.retrieveHighScore()) {
+            if (dots > user.retrieveHighScore() && dots != 0) {
                 scoreLabel.text = "High Score!"
                 updateHighScore(highScore: dots)
             } else {
                 scoreLabel.text = "Failure!"
             }
+            user.setDotsCleared(newDots: dots)
+            user.setGamesPlayed()
+            user.updateData(score: dots)
         }
         
         rotationSpeed = 200
@@ -232,8 +254,13 @@ class EndlessGameScene: SKScene {
             bgRed += 4
             bgBlue -= 3
             bgGreen -= 3
-            backgroundColor = SKColor(red: CGFloat(bgRed)/255.0, green: CGFloat(bgGreen)/255.0, blue: CGFloat(bgBlue)/255.0, alpha: 1.0)
+            if (bgGreen <= 0 && bgBlue <= 0) {
+                bgRed -= 5
+            }
             
+            UIView.animate(withDuration: 1.0, delay: 0.0, options:[.repeat, .autoreverse], animations: {
+                self.backgroundColor = SKColor(red: CGFloat(self.bgRed)/255.0, green: CGFloat(self.bgGreen)/255.0, blue: CGFloat(self.bgBlue)/255.0, alpha: 1.0)
+            }, completion:nil)
         }
     }
     
@@ -258,4 +285,18 @@ class EndlessGameScene: SKScene {
             }
         }
     }
+    
+//    func createAndLoadRewardAd() {
+//        let rewardVideo = GADRewardBasedVideoAd.sharedInstance()
+//        rewardVideo.delegate = self
+//        if (!rewar) && rewardVideo?.isReady == false) {
+//            rewardVideo.load(GADRequest(), withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
+//        }
+//
+//    }
+//
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
+        print("reward of \(reward.type), in amount \(reward.amount)")
+    }
+    
 }

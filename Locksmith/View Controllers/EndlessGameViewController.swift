@@ -10,8 +10,11 @@ import UIKit
 import SpriteKit
 import GoogleMobileAds
 import FirebaseDatabase
+import GameKit
 
 class EndlessGameViewController: UIViewController, GameDelegate {
+    
+    
     
     var interstitial: GADInterstitial! // Initiating the ad object
     var continueMode: Bool?
@@ -32,7 +35,7 @@ class EndlessGameViewController: UIViewController, GameDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3672141075661360/3005448192")
         let request = GADRequest()
         interstitial.load(request)
         
@@ -60,6 +63,7 @@ class EndlessGameViewController: UIViewController, GameDelegate {
     }
     
     func gameFinished() {
+       
         shareButton.isHidden = false
         gamesCompleted += 1
         if (gamesCompleted % 2 == 0) {
@@ -89,4 +93,5 @@ class EndlessGameViewController: UIViewController, GameDelegate {
         self.view.drawHierarchy(in: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height), afterScreenUpdates: false)
         newImage = UIGraphicsGetImageFromCurrentImageContext()
     }
+    
 }

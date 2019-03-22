@@ -11,8 +11,11 @@
 		512628E5A16BFA92EC981076 /* Pods_LocksmithTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76530D542B1657591DDDA6BC /* Pods_LocksmithTests.framework */; };
 		8E0198792202A6F400658D81 /* EndlessGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0198782202A6F400658D81 /* EndlessGameScene.swift */; };
 		8E01987B2202AC6E00658D81 /* EndlessGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01987A2202AC6E00658D81 /* EndlessGameViewController.swift */; };
+		8E02E47922283F59006E0ECC /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E02E47822283F59006E0ECC /* DeviceInfo.swift */; };
+		8E2588942243DE14007491F7 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2588932243DE14007491F7 /* GameKit.framework */; };
 		8E3B4D5922023CD400FF0C7E /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3B4D5822023CD400FF0C7E /* StatsViewController.swift */; };
 		8E3BACC22202102600606C49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E3BACC12202102600606C49 /* GoogleService-Info.plist */; };
+		8E7EE0D3223C1BEB00BB056E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EE0D2223C1BEB00BB056E /* TableViewController.swift */; };
 		8E85F7BB22204FAD00DD04AC /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85F7BA22204FAD00DD04AC /* UserInfo.swift */; };
 		8E85F7BD2220C50300DD04AC /* UserAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85F7BC2220C50200DD04AC /* UserAds.swift */; };
 		A605C9D81BB3F06600E9497F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605C9D71BB3F06600E9497F /* AppDelegate.swift */; };
@@ -50,9 +53,13 @@
 		76530D542B1657591DDDA6BC /* Pods_LocksmithTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocksmithTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0198782202A6F400658D81 /* EndlessGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessGameScene.swift; sourceTree = "<group>"; };
 		8E01987A2202AC6E00658D81 /* EndlessGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessGameViewController.swift; sourceTree = "<group>"; };
+		8E02E47822283F59006E0ECC /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		8E2588932243DE14007491F7 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		8E3B4D5822023CD400FF0C7E /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		8E3BACBF21FF853900606C49 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8E3BACC12202102600606C49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8E75C1EF2243067F0010EE38 /* Locksmith.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Locksmith.entitlements; sourceTree = "<group>"; };
+		8E7EE0D2223C1BEB00BB056E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8E85F7BA22204FAD00DD04AC /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		8E85F7BC2220C50200DD04AC /* UserAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAds.swift; sourceTree = "<group>"; };
 		9202845C5468E61E3881DB35 /* Pods-Locksmith.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locksmith.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Locksmith/Pods-Locksmith.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6F49C5B8EDA1EA86A38E7AB /* Pods_Locksmith.framework in Frameworks */,
+				8E2588942243DE14007491F7 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +118,7 @@
 				A605CA0B1BB45F4200E9497F /* MenuViewController.swift */,
 				8E01987A2202AC6E00658D81 /* EndlessGameViewController.swift */,
 				8E3B4D5822023CD400FF0C7E /* StatsViewController.swift */,
+				8E7EE0D2223C1BEB00BB056E /* TableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -117,6 +126,7 @@
 		8E3BACBE21FF853900606C49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E2588932243DE14007491F7 /* GameKit.framework */,
 				8E3BACBF21FF853900606C49 /* iAd.framework */,
 				5807C88D3E4CE7CC4BFE60E0 /* Pods_Locksmith.framework */,
 				76530D542B1657591DDDA6BC /* Pods_LocksmithTests.framework */,
@@ -130,6 +140,7 @@
 			children = (
 				8E85F7BA22204FAD00DD04AC /* UserInfo.swift */,
 				8E85F7BC2220C50200DD04AC /* UserAds.swift */,
+				8E02E47822283F59006E0ECC /* DeviceInfo.swift */,
 			);
 			path = "User Classes";
 			sourceTree = "<group>";
@@ -172,6 +183,7 @@
 		A605C9D61BB3F06600E9497F /* Locksmith */ = {
 			isa = PBXGroup;
 			children = (
+				8E75C1EF2243067F0010EE38 /* Locksmith.entitlements */,
 				A605C9D71BB3F06600E9497F /* AppDelegate.swift */,
 				A605C9DF1BB3F06600E9497F /* Main.storyboard */,
 				A605C9E21BB3F06600E9497F /* Assets.xcassets */,
@@ -278,6 +290,14 @@
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 2EUDXEZCCA;
 						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					A605C9EB1BB3F06600E9497F = {
 						CreatedOnToolsVersion = 7.0;
@@ -393,8 +413,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Locksmith/Pods-Locksmith-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -402,8 +426,12 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -444,10 +472,12 @@
 				8E01987B2202AC6E00658D81 /* EndlessGameViewController.swift in Sources */,
 				A605CA0C1BB45F4200E9497F /* MenuViewController.swift in Sources */,
 				8E0198792202A6F400658D81 /* EndlessGameScene.swift in Sources */,
+				8E7EE0D3223C1BEB00BB056E /* TableViewController.swift in Sources */,
 				A605C9D81BB3F06600E9497F /* AppDelegate.swift in Sources */,
 				8E3B4D5922023CD400FF0C7E /* StatsViewController.swift in Sources */,
 				8E85F7BB22204FAD00DD04AC /* UserInfo.swift in Sources */,
 				A605CA0A1BB42A4C00E9497F /* Extensions.swift in Sources */,
+				8E02E47922283F59006E0ECC /* DeviceInfo.swift in Sources */,
 				8E85F7BD2220C50300DD04AC /* UserAds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,6 +644,7 @@
 			baseConfigurationReference = 9202845C5468E61E3881DB35 /* Pods-Locksmith.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Locksmith/Locksmith.entitlements;
 				DEVELOPMENT_TEAM = 2EUDXEZCCA;
 				INFOPLIST_FILE = Locksmith/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -630,6 +661,7 @@
 			baseConfigurationReference = DCA8D21022AFBCE23298983D /* Pods-Locksmith.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Locksmith/Locksmith.entitlements;
 				DEVELOPMENT_TEAM = 2EUDXEZCCA;
 				INFOPLIST_FILE = Locksmith/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

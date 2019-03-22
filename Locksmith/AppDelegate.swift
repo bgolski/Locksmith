@@ -15,17 +15,14 @@ import FirebaseAuth
 @UIApplicationMain
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
+    
     private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-
-        
         
         //Initialize AdMob
         GADMobileAds.configure(withApplicationID: "ca-app-pub-3672141075661360~6523589670")
-        
         
         return true
     }

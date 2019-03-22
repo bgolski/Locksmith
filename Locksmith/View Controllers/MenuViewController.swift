@@ -11,7 +11,13 @@ import GoogleMobileAds
 
 class MenuViewController: UIViewController {
     
+    var device: DeviceInfo?
+    
     @IBOutlet weak var bannerView: GADBannerView!
+    
+    @IBOutlet weak var lockImage: UIImageView!
+    
+    @IBOutlet weak var titleView: UILabel!
     
     
     @IBAction func endlessButtonHandler(_ sender: Any) {
@@ -38,13 +44,14 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        device = DeviceInfo()
         
         // Do any additional setup after loading the view.
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-3672141075661360/2582947809"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
+        titleView.font = UIFont(name: "AvenirNext-Bold", size: (device?.retrieveTitleFontSize())!)
     }
 
     override func didReceiveMemoryWarning() {
