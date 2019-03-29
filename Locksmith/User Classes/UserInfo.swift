@@ -19,7 +19,7 @@ class UserInfo {
     var deviceType =  ""
     var uuid: String = ""
     var defaults = UserDefaults.standard
-    static var highScore: intmax_t?
+    static var highScore: Int?
     static var dotsCleared: intmax_t?
     static var gamesPlayed: intmax_t?
     static var games: [[String: Int]] = []
@@ -64,7 +64,7 @@ class UserInfo {
         }
     }
     
-    func retrieveHighScore() -> intmax_t{
+    func retrieveHighScore() -> Int {
         if let highScore = UserInfo.highScore {
             return highScore
         }

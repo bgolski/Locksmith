@@ -15,15 +15,14 @@
 		8E2588942243DE14007491F7 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2588932243DE14007491F7 /* GameKit.framework */; };
 		8E3B4D5922023CD400FF0C7E /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3B4D5822023CD400FF0C7E /* StatsViewController.swift */; };
 		8E3BACC22202102600606C49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E3BACC12202102600606C49 /* GoogleService-Info.plist */; };
-		8E7EE0D3223C1BEB00BB056E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EE0D2223C1BEB00BB056E /* TableViewController.swift */; };
+		8E539085224883D300DFB3A6 /* StartOverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E539084224883D300DFB3A6 /* StartOverDelegate.swift */; };
 		8E85F7BB22204FAD00DD04AC /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85F7BA22204FAD00DD04AC /* UserInfo.swift */; };
 		8E85F7BD2220C50300DD04AC /* UserAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85F7BC2220C50200DD04AC /* UserAds.swift */; };
+		8EA19D26224DA1F2002A5E67 /* TryAgainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA19D25224DA1F2002A5E67 /* TryAgainViewController.swift */; };
 		A605C9D81BB3F06600E9497F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605C9D71BB3F06600E9497F /* AppDelegate.swift */; };
 		A605C9E11BB3F06600E9497F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A605C9DF1BB3F06600E9497F /* Main.storyboard */; };
 		A605C9E31BB3F06600E9497F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A605C9E21BB3F06600E9497F /* Assets.xcassets */; };
 		A605C9E61BB3F06600E9497F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A605C9E41BB3F06600E9497F /* LaunchScreen.storyboard */; };
-		A605C9F11BB3F06600E9497F /* LocksmithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605C9F01BB3F06600E9497F /* LocksmithTests.swift */; };
-		A605C9FC1BB3F06600E9497F /* LocksmithUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605C9FB1BB3F06600E9497F /* LocksmithUITests.swift */; };
 		A605CA0A1BB42A4C00E9497F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605CA091BB42A4C00E9497F /* Extensions.swift */; };
 		A605CA0C1BB45F4200E9497F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605CA0B1BB45F4200E9497F /* MenuViewController.swift */; };
 		D6F49C5B8EDA1EA86A38E7AB /* Pods_Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5807C88D3E4CE7CC4BFE60E0 /* Pods_Locksmith.framework */; };
@@ -58,10 +57,11 @@
 		8E3B4D5822023CD400FF0C7E /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		8E3BACBF21FF853900606C49 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8E3BACC12202102600606C49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8E539084224883D300DFB3A6 /* StartOverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartOverDelegate.swift; sourceTree = "<group>"; };
 		8E75C1EF2243067F0010EE38 /* Locksmith.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Locksmith.entitlements; sourceTree = "<group>"; };
-		8E7EE0D2223C1BEB00BB056E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8E85F7BA22204FAD00DD04AC /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		8E85F7BC2220C50200DD04AC /* UserAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAds.swift; sourceTree = "<group>"; };
+		8EA19D25224DA1F2002A5E67 /* TryAgainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryAgainViewController.swift; sourceTree = "<group>"; };
 		9202845C5468E61E3881DB35 /* Pods-Locksmith.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locksmith.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Locksmith/Pods-Locksmith.debug.xcconfig"; sourceTree = "<group>"; };
 		9D4E76E06D3319BAC85BA627 /* Pods-LocksmithTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocksmithTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocksmithTests/Pods-LocksmithTests.release.xcconfig"; sourceTree = "<group>"; };
 		A605C9D41BB3F06600E9497F /* Locksmith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locksmith.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,11 +71,7 @@
 		A605C9E51BB3F06600E9497F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A605C9E71BB3F06600E9497F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A605C9EC1BB3F06600E9497F /* LocksmithTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocksmithTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A605C9F01BB3F06600E9497F /* LocksmithTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocksmithTests.swift; sourceTree = "<group>"; };
-		A605C9F21BB3F06600E9497F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A605C9F71BB3F06600E9497F /* LocksmithUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocksmithUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A605C9FB1BB3F06600E9497F /* LocksmithUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocksmithUITests.swift; sourceTree = "<group>"; };
-		A605C9FD1BB3F06600E9497F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A605CA091BB42A4C00E9497F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A605CA0B1BB45F4200E9497F /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		D830985EA3986F33F74AAABF /* Pods-LocksmithUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocksmithUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocksmithUITests/Pods-LocksmithUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,8 +113,8 @@
 			children = (
 				A605CA0B1BB45F4200E9497F /* MenuViewController.swift */,
 				8E01987A2202AC6E00658D81 /* EndlessGameViewController.swift */,
+				8EA19D25224DA1F2002A5E67 /* TryAgainViewController.swift */,
 				8E3B4D5822023CD400FF0C7E /* StatsViewController.swift */,
-				8E7EE0D2223C1BEB00BB056E /* TableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -141,6 +137,7 @@
 				8E85F7BA22204FAD00DD04AC /* UserInfo.swift */,
 				8E85F7BC2220C50200DD04AC /* UserAds.swift */,
 				8E02E47822283F59006E0ECC /* DeviceInfo.swift */,
+				8E539084224883D300DFB3A6 /* StartOverDelegate.swift */,
 			);
 			path = "User Classes";
 			sourceTree = "<group>";
@@ -162,8 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				A605C9D61BB3F06600E9497F /* Locksmith */,
-				A605C9EF1BB3F06600E9497F /* LocksmithTests */,
-				A605C9FA1BB3F06600E9497F /* LocksmithUITests */,
 				A605C9D51BB3F06600E9497F /* Products */,
 				8E3BACBE21FF853900606C49 /* Frameworks */,
 				A164DB5B4C72AFBA2C15FED6 /* Pods */,
@@ -196,24 +191,6 @@
 				8E3BACC12202102600606C49 /* GoogleService-Info.plist */,
 			);
 			path = Locksmith;
-			sourceTree = "<group>";
-		};
-		A605C9EF1BB3F06600E9497F /* LocksmithTests */ = {
-			isa = PBXGroup;
-			children = (
-				A605C9F01BB3F06600E9497F /* LocksmithTests.swift */,
-				A605C9F21BB3F06600E9497F /* Info.plist */,
-			);
-			path = LocksmithTests;
-			sourceTree = "<group>";
-		};
-		A605C9FA1BB3F06600E9497F /* LocksmithUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A605C9FB1BB3F06600E9497F /* LocksmithUITests.swift */,
-				A605C9FD1BB3F06600E9497F /* Info.plist */,
-			);
-			path = LocksmithUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,13 +260,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					A605C9D31BB3F06600E9497F = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 2EUDXEZCCA;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.GameCenter.iOS = {
 								enabled = 1;
@@ -316,6 +293,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -470,9 +448,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E01987B2202AC6E00658D81 /* EndlessGameViewController.swift in Sources */,
+				8E539085224883D300DFB3A6 /* StartOverDelegate.swift in Sources */,
 				A605CA0C1BB45F4200E9497F /* MenuViewController.swift in Sources */,
+				8EA19D26224DA1F2002A5E67 /* TryAgainViewController.swift in Sources */,
 				8E0198792202A6F400658D81 /* EndlessGameScene.swift in Sources */,
-				8E7EE0D3223C1BEB00BB056E /* TableViewController.swift in Sources */,
 				A605C9D81BB3F06600E9497F /* AppDelegate.swift in Sources */,
 				8E3B4D5922023CD400FF0C7E /* StatsViewController.swift in Sources */,
 				8E85F7BB22204FAD00DD04AC /* UserInfo.swift in Sources */,
@@ -486,7 +465,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A605C9F11BB3F06600E9497F /* LocksmithTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,7 +472,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A605C9FC1BB3F06600E9497F /* LocksmithUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -579,7 +557,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -593,6 +571,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -629,7 +608,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -651,7 +630,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bgolski.Locksmith;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -668,7 +647,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bgolski.Locksmith;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

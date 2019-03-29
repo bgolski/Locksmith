@@ -29,18 +29,7 @@ class MenuViewController: UIViewController {
     @IBAction func statsButtonHandler(_ sender: Any) {
     performSegue(withIdentifier: "menuToStats", sender: self)
     }
-//    
-//    @IBAction func playButtonHandler(sender: AnyObject) {
-//        let gvc = storyboard?.instantiateViewController(withIdentifier: "gameViewController") as! GameViewController
-//        gvc.continueMode = false
-//        present(gvc, animated: true, completion: nil)
-//    }
-//    
-//    @IBAction func continueButtonHandler(sender: AnyObject) {
-//        let gvc = storyboard?.instantiateViewController(withIdentifier: "gameViewController") as! GameViewController
-//        gvc.continueMode = true
-//        present(gvc, animated: true, completion: nil)
-//    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +37,7 @@ class MenuViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        bannerView.adUnitID = "ca-app-pub-3672141075661360/2582947809"
+        bannerView.adUnitID = "ca-app-pub-3672141075661360/2582947809" /*"ca-app-pub-3940256099942544/2934735716"*/
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         titleView.font = UIFont(name: "AvenirNext-Bold", size: (device?.retrieveTitleFontSize())!)
