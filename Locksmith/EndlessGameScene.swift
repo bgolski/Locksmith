@@ -45,6 +45,7 @@ class EndlessGameScene: SKScene {
     var bgBlue = 243.0
     var bgGreen = 219.0
     var lastGameDots: Int = 0
+
     
     override func didMove(to view: SKView) {
         newUser = UserInfo()
@@ -55,9 +56,6 @@ class EndlessGameScene: SKScene {
         layoutGame()
         
         gameCompleted = (newUser?.retrieveGamesPlayed())!
-        
-        print("gameCompleted: \(gameCompleted)")
-        
     }
     
     func layoutGame() {
@@ -78,15 +76,7 @@ class EndlessGameScene: SKScene {
         // -- = -- (32-22)m=(w-ow) (32-22)/(w-ow)=m     w*m = font size
         // 22   ow
 
-        print("height: \(self.frame.height)")
         backgroundColor = SKColor(red: 28.0/255.0, green: 219.0/255.0, blue: 243.0/255.0, alpha: 1.0)
-        
-//        safeImage.alpha = 1
-//        print("height : \(safeImage.frame.size.height)")
-//        safeImage.frame = CGRect(x: self.frame.width / 2, y: self.frame.height / 2, width: 225, height: 225)
-//        safeImage.center = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
-//
-//        self.view?.addSubview(safeImage)
         
         path = UIBezierPath(arcCenter: CGPoint(x: width/2, y: height), radius: 120, startAngle: zeroAngle, endAngle: zeroAngle + CGFloat(Double.pi * 2), clockwise: true)
         lock = SKShapeNode(path: path.cgPath)
@@ -200,7 +190,7 @@ class EndlessGameScene: SKScene {
         
         path = UIBezierPath(arcCenter: CGPoint(x: self.frame.width / 2, y: self.frame.height / 2), radius: 120, startAngle: radian, endAngle: radian + CGFloat(Double.pi * 2), clockwise: true)
         let run = SKAction.follow(path.cgPath, asOffset: false, orientToPath: true, speed: CGFloat(rotationSpeed))
-        needle.run(SKAction.repeatForever(run).reversed())
+        needle.run(SKAction.repeatForever(run).reversed(), withKey: "moving")
     }
     
     func runCounterClockwise() {
@@ -211,7 +201,7 @@ class EndlessGameScene: SKScene {
         
         path = UIBezierPath(arcCenter: CGPoint(x: self.frame.width / 2, y: self.frame.height / 2), radius: 120, startAngle: radian, endAngle: radian + CGFloat(Double.pi * 2), clockwise: true)
         let run = SKAction.follow(path.cgPath, asOffset: false, orientToPath: true, speed: CGFloat(rotationSpeed))
-        needle.run(SKAction.repeatForever(run))
+        needle.run(SKAction.repeatForever(run), withKey: "moving")
     }
     
     func dotTouched() {
@@ -265,12 +255,12 @@ class EndlessGameScene: SKScene {
         self.addChild(dot)
     }
     
+    
     func gameOver() {
         isUserInteractionEnabled = false
         needle.removeFromParent()
         notification.notificationOccurred(.error)
         lastGameSpeed = rotationSpeed
-        
         if let user = self.newUser{
             if (dots > user.retrieveHighScore() && dots != 0) {
                 scoreLabel.text = "High Score!"

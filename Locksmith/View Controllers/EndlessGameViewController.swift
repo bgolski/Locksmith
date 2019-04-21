@@ -10,7 +10,6 @@ import UIKit
 import SpriteKit
 import GoogleMobileAds
 import FirebaseDatabase
-import GameKit
 
 
 class EndlessGameViewController: UIViewController, GameDelegate, GADRewardBasedVideoAdDelegate {
@@ -20,6 +19,7 @@ class EndlessGameViewController: UIViewController, GameDelegate, GADRewardBasedV
     var delegate: StartOverDelegate?
     var gameScene: EndlessGameScene?
     var tryAgainViewController: TryAgainViewController?
+    var pauseViewController: PauseViewController?
     var interstitial: GADInterstitial! // Initiating the ad object
     var continueMode: Bool?
     var newImage: UIImage?
@@ -41,6 +41,20 @@ class EndlessGameViewController: UIViewController, GameDelegate, GADRewardBasedV
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func pauseButton(_ sender: Any) {
+            pauseButton.isHidden = true
+            self.pauseViewController = PauseViewController()
+            if let pauseViewController = self.pauseViewController {
+                pauseViewController.modalPresentationStyle = .overCurrentContext
+                pauseViewController.modalTransitionStyle = .crossDissolve
+                pauseViewController.scene = self
+                pauseViewController.gameScene = self.gameScene
+                present(pauseViewController, animated: true)
+        }
+    }
+    
+    @IBOutlet weak var pauseButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         rewardBasedAd = GADRewardBasedVideoAd.sharedInstance()
@@ -48,6 +62,7 @@ class EndlessGameViewController: UIViewController, GameDelegate, GADRewardBasedV
         rewardBasedAd.load(GADRequest(), withAdUnitID: "ca-app-pub-3672141075661360/4079453189")
         
         shareButton.isHidden = true
+        pauseButton.isHidden = true
         let scene = EndlessGameScene(size: view.bounds.size)
         // Configure the view
         let skView = self.view as! SKView
@@ -73,17 +88,16 @@ class EndlessGameViewController: UIViewController, GameDelegate, GADRewardBasedV
     
     func gameStarted() {
         shareButton.isHidden = true
+        pauseButton.isHidden = false
         interstitial = createAndLoadInterstitial()
         rewardBasedAd.load(GADRequest(), withAdUnitID: "ca-app-pub-3672141075661360/4079453189")
     }
     
     func gameFinished(dots: Int, highScore: Int) {
         shareButton.isHidden = false
-        print("SUCCESS")
-        print("dots: \(dots)")
-        print("highScore: \(highScore)")
-        
-        if (Double(dots) >= (Double(highScore) * 0.50) && adWatched == false) {
+        pauseButton.setImage(#imageLiteral(resourceName: "pause-40"), for: .normal)
+        pauseButton.isHidden = true
+        if (Double(dots) >= (Double(highScore) * 0.50) && adWatched == false && rewardBasedAd.isReady) {
             adWatched = true
             self.tryAgainViewController = TryAgainViewController()
             if let tryAgainViewController = self.tryAgainViewController{
@@ -98,14 +112,11 @@ class EndlessGameViewController: UIViewController, GameDelegate, GADRewardBasedV
             if (gamesCompleted % 2 == 0) {
                 if interstitial.isReady {
                     interstitial.present(fromRootViewController: self)
-                    interstitial = GADInterstitial(adUnitID:
-                        ///"ca-app-pub-3940256099942544/4411468910"
-                    
-                        "ca-app-pub-3672141075661360/3005448192")
+                    interstitial = GADInterstitial(adUnitID:"ca-app-pub-3672141075661360/3005448192")
                     let request = GADRequest()
                     interstitial.load(request)
                 } else {
-                    print("Error")
+                    print("Error loading ad")
                 }
             }
         }
@@ -133,11 +144,10 @@ class EndlessGameViewController: UIViewController, GameDelegate, GADRewardBasedV
     }
     
     @objc func removeSubview() {
-        print("Start remove subview")
         if let viewWithTag = self.view.viewWithTag(50) {
             viewWithTag.removeFromSuperview()
         }else{
-            print("No!")
+            print("Failed to load ad!")
         }
         self.view.isUserInteractionEnabled = true
     }
@@ -149,7 +159,7 @@ class EndlessGameViewController: UIViewController, GameDelegate, GADRewardBasedV
         newImage = UIGraphicsGetImageFromCurrentImageContext()
     }
     func createAndLoadInterstitial() -> GADInterstitial {
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3672141075661360/3005448192"/*"ca-app-pub-3672141075661360/3005448192"*/)
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3672141075661360/3005448192")
         interstitial.delegate = self as? GADInterstitialDelegate
         interstitial.load(GADRequest())
         return interstitial

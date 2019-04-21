@@ -84,8 +84,6 @@ class UserInfo {
     
     func retrieveDotsCleared() -> Int {
         if let dotsCleared = UserInfo.dotsCleared {
-            
-            print("Dots cleared: \(dotsCleared)")
             return dotsCleared
         }
         return 0
@@ -98,7 +96,6 @@ class UserInfo {
     
     func retrieveGamesPlayed() -> Int {
         if let gamesPlayed = UserInfo.gamesPlayed {
-            print("games played: \(gamesPlayed)")
             return gamesPlayed
         }
         return 0

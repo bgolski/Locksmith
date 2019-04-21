@@ -8,14 +8,15 @@
 
 import UIKit
 import GoogleMobileAds
+import GameKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController /* GKGameCenterControllerDelegate */ {
     
     var device: DeviceInfo?
+    var gcEnabled = Bool()
+    var gcDefaultLeaderboard = String()
     
     @IBOutlet weak var bannerView: GADBannerView!
-    
-    @IBOutlet weak var lockImage: UIImageView!
     
     @IBOutlet weak var titleView: UILabel!
     
@@ -37,7 +38,7 @@ class MenuViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        bannerView.adUnitID = "ca-app-pub-3672141075661360/2582947809" /*"ca-app-pub-3940256099942544/2934735716"*/
+        bannerView.adUnitID = "ca-app-pub-3672141075661360/2582947809"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         titleView.font = UIFont(name: "AvenirNext-Bold", size: (device?.retrieveTitleFontSize())!)
@@ -48,6 +49,34 @@ class MenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+//    func authenticateLocalPlayer() {
+//        let localPlayer: GKLocalPlayer = GKLocalPlayer.local
+//
+//        localPlayer.authenticateHandler = {(MenuViewController, error) -> Void in
+//            if (MenuViewController != nil) {
+//                self.present(MenuViewController, animated: true)
+//            } else if (localPlayer.isAuthenticated) {
+//                print("Local player is already authenticated")
+//                self.gcEnabled = true
+//
+//                localPlayer.loadDefaultLeaderboardIdentifier(leaderboardIdentifier: String!, error: NSError!) -> Void in
+//                if error != nil {
+//                    print(error)
+////                } else {
+////                    self.
+////                }
+//    
+//                
+//                
+//                
+//            } else {
+//                self.gcEnabled = false
+//                print("Local player could not be authenticated, disabling Game Center")
+//            }
+//            
+//        }
+//    }
+//    
 
     /*
     // MARK: - Navigation

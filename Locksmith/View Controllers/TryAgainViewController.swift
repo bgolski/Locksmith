@@ -12,18 +12,6 @@ import GoogleMobileAds
 
 class TryAgainViewController: UIViewController {
     
-//    override var modalPresentationStyle: UIModalPresentationStyle {
-//        get{
-//            return .overFullScreen
-//        }
-//    }
-//    
-//    override var modalTransitionStyle: UIModalTransitionStyle {
-//        get{
-//            return .crossDissolve
-//        }
-//    }
-    
     
     
     var scene: EndlessGameViewController?
@@ -33,7 +21,6 @@ class TryAgainViewController: UIViewController {
         view.isOpaque = false
         scene?.shareButton.isEnabled = false
         scene?.menuButton.isEnabled = false
-        //        super.view.isUserInteractionEnabled = false
         
         let tryAgainView = UIView()
         tryAgainView.isUserInteractionEnabled = true
@@ -88,10 +75,6 @@ class TryAgainViewController: UIViewController {
         let aSelector : Selector = #selector(EndlessGameViewController.removeSubview)
         let tapGesture = UITapGestureRecognizer(target:self, action: aSelector)
         noButton.addGestureRecognizer(tapGesture)
-        self.view.tag = 30
-        
-        print("TAG: \(self.view.tag)")
-        
         
         tryAgainView.addSubview(noButton)
         

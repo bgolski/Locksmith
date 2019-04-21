@@ -18,6 +18,7 @@
 		8E539085224883D300DFB3A6 /* StartOverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E539084224883D300DFB3A6 /* StartOverDelegate.swift */; };
 		8E85F7BB22204FAD00DD04AC /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85F7BA22204FAD00DD04AC /* UserInfo.swift */; };
 		8E85F7BD2220C50300DD04AC /* UserAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85F7BC2220C50200DD04AC /* UserAds.swift */; };
+		8EA0B2B7226CDA8D00674BD8 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0B2B6226CDA8D00674BD8 /* PauseViewController.swift */; };
 		8EA19D26224DA1F2002A5E67 /* TryAgainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA19D25224DA1F2002A5E67 /* TryAgainViewController.swift */; };
 		A605C9D81BB3F06600E9497F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A605C9D71BB3F06600E9497F /* AppDelegate.swift */; };
 		A605C9E11BB3F06600E9497F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A605C9DF1BB3F06600E9497F /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		8E75C1EF2243067F0010EE38 /* Locksmith.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Locksmith.entitlements; sourceTree = "<group>"; };
 		8E85F7BA22204FAD00DD04AC /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		8E85F7BC2220C50200DD04AC /* UserAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAds.swift; sourceTree = "<group>"; };
+		8EA0B2B6226CDA8D00674BD8 /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
 		8EA19D25224DA1F2002A5E67 /* TryAgainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryAgainViewController.swift; sourceTree = "<group>"; };
 		9202845C5468E61E3881DB35 /* Pods-Locksmith.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locksmith.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Locksmith/Pods-Locksmith.debug.xcconfig"; sourceTree = "<group>"; };
 		9D4E76E06D3319BAC85BA627 /* Pods-LocksmithTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocksmithTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocksmithTests/Pods-LocksmithTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				A605CA0B1BB45F4200E9497F /* MenuViewController.swift */,
 				8E01987A2202AC6E00658D81 /* EndlessGameViewController.swift */,
+				8EA0B2B6226CDA8D00674BD8 /* PauseViewController.swift */,
 				8EA19D25224DA1F2002A5E67 /* TryAgainViewController.swift */,
 				8E3B4D5822023CD400FF0C7E /* StatsViewController.swift */,
 			);
@@ -290,10 +293,9 @@
 			};
 			buildConfigurationList = A605C9CF1BB3F06600E9497F /* Build configuration list for PBXProject "Locksmith" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -452,6 +454,7 @@
 				A605CA0C1BB45F4200E9497F /* MenuViewController.swift in Sources */,
 				8EA19D26224DA1F2002A5E67 /* TryAgainViewController.swift in Sources */,
 				8E0198792202A6F400658D81 /* EndlessGameScene.swift in Sources */,
+				8EA0B2B7226CDA8D00674BD8 /* PauseViewController.swift in Sources */,
 				A605C9D81BB3F06600E9497F /* AppDelegate.swift in Sources */,
 				8E3B4D5922023CD400FF0C7E /* StatsViewController.swift in Sources */,
 				8E85F7BB22204FAD00DD04AC /* UserInfo.swift in Sources */,
