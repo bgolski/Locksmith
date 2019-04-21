@@ -48,44 +48,4 @@ class MenuViewController: UIViewController /* GKGameCenterControllerDelegate */ 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-//    func authenticateLocalPlayer() {
-//        let localPlayer: GKLocalPlayer = GKLocalPlayer.local
-//
-//        localPlayer.authenticateHandler = {(MenuViewController, error) -> Void in
-//            if (MenuViewController != nil) {
-//                self.present(MenuViewController, animated: true)
-//            } else if (localPlayer.isAuthenticated) {
-//                print("Local player is already authenticated")
-//                self.gcEnabled = true
-//
-//                localPlayer.loadDefaultLeaderboardIdentifier(leaderboardIdentifier: String!, error: NSError!) -> Void in
-//                if error != nil {
-//                    print(error)
-////                } else {
-////                    self.
-////                }
-//    
-//                
-//                
-//                
-//            } else {
-//                self.gcEnabled = false
-//                print("Local player could not be authenticated, disabling Game Center")
-//            }
-//            
-//        }
-//    }
-//    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

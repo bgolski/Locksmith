@@ -94,6 +94,8 @@ class TryAgainViewController: UIViewController {
     }
     
     @objc func removeSubview() {
+        scene?.shareButton.isEnabled = true
+        scene?.menuButton.isEnabled = true
            self.dismiss(animated: true)
         }
     

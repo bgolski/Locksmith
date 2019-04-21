@@ -65,8 +65,6 @@ class PauseViewController: UIViewController {
         
     view.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.3)
     view.isOpaque = false
-    scene?.shareButton.isEnabled = false
-    scene?.menuButton.isEnabled = false
     }
     
     func startTimer() {
@@ -86,8 +84,6 @@ class PauseViewController: UIViewController {
     func endTimer() {
         countdownTimer.invalidate()
         self.scene?.pauseButton.isHidden = false
-        scene?.shareButton.isEnabled = true
-        scene?.menuButton.isEnabled = true
         self.dismiss(animated: true)
         gameScene?.needle.isPaused = false
         gameScene?.scoreLabel.text = "\(gameScene?.dots ?? 0)"
