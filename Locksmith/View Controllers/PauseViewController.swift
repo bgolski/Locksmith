@@ -34,7 +34,7 @@ class PauseViewController: UIViewController {
         let pauseLabel = UILabel()
         pauseLabel.frame = CGRect(x: 0, y: (pauseView.frame.width / 8), width: pauseView.frame.width, height: 40)
         pauseLabel.textAlignment = .center
-        pauseLabel.font = UIFont(name: "AvenirNext-Medium", size: (40))
+        pauseLabel.font = UIFont(name: "Baskerville-Medium", size: (40))
         pauseLabel.numberOfLines = 2
         pauseLabel.text = "Paused"
         pauseLabel.textColor = UIColor.white

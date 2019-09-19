@@ -90,7 +90,7 @@ class EndlessGameScene: SKScene {
         needle.zPosition = 2.0
         self.addChild(needle)
         scoreLabel.center = CGPoint(x: frame.midX, y: frame.midY)
-        scoreLabel.font = UIFont(name: "AvenirNext-Bold", size: 26.0)
+        scoreLabel.font = UIFont(name: "Baskerville-Bold", size: 26.0)
         scoreLabel.textColor = UIColor(displayP3Red: 236.0/255.0, green: 240.0/255.0, blue: 241.0/255.0, alpha: 1.0)
         scoreLabel.text = "Tap Anywhere!"
         scoreLabel.frame = CGRect(x: frame.midX, y: frame.midY, width: self.frame.width, height: 53)
@@ -98,7 +98,7 @@ class EndlessGameScene: SKScene {
         scoreLabel.textAlignment = .center
         
         self.view?.addSubview(scoreLabel)
-        highScoreLabel = SKLabelNode(fontNamed: "AvenirNext")
+        highScoreLabel = SKLabelNode(fontNamed: "Baskerville")
         highScoreLabel.position = CGPoint(x: width/2, y: self.frame.height - (self.frame.height * 0.2))
         highScoreLabel.fontColor = SKColor(red: 236.0/255.0, green: 240.0/255.0, blue: 241.0/255.0, alpha: 1.0)
         highScoreLabel.fontSize = CGFloat(20)
@@ -139,7 +139,7 @@ class EndlessGameScene: SKScene {
         
         self.addChild(needle)
         scoreLabel.center = CGPoint(x: frame.midX, y: frame.midY)
-        scoreLabel.font = UIFont(name: "AvenirNext-Bold", size: 24.0)
+        scoreLabel.font = UIFont(name: "Baskerville-Bold", size: 24.0)
         scoreLabel.textColor = UIColor(displayP3Red: 236.0/255.0, green: 240.0/255.0, blue: 241.0/255.0, alpha: 1.0)
         scoreLabel.text = "Tap To Continue!"
         scoreLabel.frame = CGRect(x: frame.midX, y: frame.midY, width: self.frame.width, height: 53)
@@ -147,7 +147,7 @@ class EndlessGameScene: SKScene {
         scoreLabel.textAlignment = .center
         
         self.view?.addSubview(scoreLabel)
-        highScoreLabel = SKLabelNode(fontNamed: "AvenirNext")
+        highScoreLabel = SKLabelNode(fontNamed: "Baskerville")
         highScoreLabel.position = CGPoint(x: width/2, y: self.frame.height - (self.frame.height * 0.2))
         highScoreLabel.fontColor = SKColor(red: 236.0/255.0, green: 240.0/255.0, blue: 241.0/255.0, alpha: 1.0)
         highScoreLabel.fontSize = CGFloat(20)
@@ -173,7 +173,7 @@ class EndlessGameScene: SKScene {
         if !started {
             runClockwise()
             self.gameDelegate?.gameStarted()
-            scoreLabel.font = UIFont(name: "AvenirNext-Bold", size: 30.0)
+            scoreLabel.font = UIFont(name: "Baskerville-Bold", size: 30.0)
             scoreLabel.text = "\(dots)"
             started = true
             clockwise = true

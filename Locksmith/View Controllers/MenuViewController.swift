@@ -41,7 +41,7 @@ class MenuViewController: UIViewController /* GKGameCenterControllerDelegate */ 
         bannerView.adUnitID = "ca-app-pub-3672141075661360/2582947809"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
-        titleView.font = UIFont(name: "AvenirNext-Bold", size: (device?.retrieveTitleFontSize())!)
+        titleView.font = UIFont(name: "Baskerville-Bold", size: (device?.retrieveTitleFontSize())!)
     }
 
     override func didReceiveMemoryWarning() {

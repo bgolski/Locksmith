@@ -191,6 +191,8 @@ class EndlessGameViewController: UIViewController, GameDelegate, GADRewardBasedV
     func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
         print("Reward based video ad is closed.")
         self.tryAgainViewController?.dismiss(animated: true)
+        self.menuButton.isEnabled = true
+        self.shareButton.isEnabled = true
         self.gameScene?.restartingGame()
     }
     

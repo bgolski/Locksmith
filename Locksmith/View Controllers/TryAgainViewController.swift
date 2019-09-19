@@ -39,7 +39,7 @@ class TryAgainViewController: UIViewController {
         let continueLabel = UILabel()
         continueLabel.frame = CGRect(x: 0, y: (tryAgainView.frame.width / 8), width: tryAgainView.frame.width, height: 40)
         continueLabel.textAlignment = .center
-        continueLabel.font = UIFont(name: "AvenirNext-Medium", size: (26))
+        continueLabel.font = UIFont(name: "Baskerville-Medium", size: (26))
         continueLabel.numberOfLines = 2
         continueLabel.text = "Watch A Video To Continue?"
         continueLabel.textColor = UIColor.white

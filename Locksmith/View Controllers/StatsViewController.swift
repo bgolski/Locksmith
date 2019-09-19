@@ -53,19 +53,19 @@ class StatsViewController: UIViewController, UITableViewDelegate,  UITableViewDa
         newUser = UserInfo()
         
         highScoreLabel.text = "High Score: \(String(describing: UserInfo.highScore ?? 0))"
-        highScoreLabel.font = UIFont(name: "AvenirNext", size: (device.retrieveStatsFontSize()))
+        highScoreLabel.font = UIFont(name: "Baskerville", size: (device.retrieveStatsFontSize()/2))
         
         dotsClearedLabel.text = "Dots Cleared: \(String(describing: UserInfo.dotsCleared ?? 0))"
-        dotsClearedLabel.font = UIFont(name: "AvenirNext", size: (device.retrieveStatsFontSize()))
+        dotsClearedLabel.font = UIFont(name: "Baskerville", size: (device.retrieveStatsFontSize()/2))
         
         
         gamesPlayedLabel.text = "Games Played: \(String(describing: UserInfo.gamesPlayed ?? 0))"
-        gamesPlayedLabel.font = UIFont(name: "AvenirNext", size: (device.retrieveStatsFontSize()))
+        gamesPlayedLabel.font = UIFont(name: "Baskerville", size: (device.retrieveStatsFontSize()/2))
         
-        averagePlayedLabel.text = "Average Score: \(String(describing: newUser!.retrieveAverageScore()))"
-        averagePlayedLabel.font = UIFont(name: "AvenirNext", size: (device.retrieveStatsFontSize()))
+        averagePlayedLabel.text = "Average Score: \(String(describing: newUser!.retrieveAverageScore()/2))"
+        averagePlayedLabel.font = UIFont(name: "Baskerville", size: (device.retrieveStatsFontSize()/2))
         
-        pastGamesLabel.font = UIFont(name: "AvenirNext", size: (device.retrieveStatsFontSize()))
+        pastGamesLabel.font = UIFont(name: "Baskerville", size: (device.retrieveStatsFontSize()/2))
         
         scrollView.isScrollEnabled = true
 
@@ -75,7 +75,7 @@ class StatsViewController: UIViewController, UITableViewDelegate,  UITableViewDa
             
             let scoreLabel = UILabel(frame: CGRect(x:0,y:0,width: 20, height: height))
             scoreLabel.text = String(game["score"]!)
-            scoreLabel.font = UIFont(name: "AvenirNext", size: 20.0)
+            scoreLabel.font = UIFont(name: "Baskerville", size: 20.0)
             scoreLabel.textColor = UIColor.white
             scoreLabel.textAlignment = .left
             gameView.addSubview(scoreLabel)
@@ -89,7 +89,7 @@ class StatsViewController: UIViewController, UITableViewDelegate,  UITableViewDa
             dateFormatter.locale = NSLocale.current
             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm" //Specify your format that you want
             timeLabel.text = dateFormatter.string(from: date)
-            timeLabel.font = UIFont(name: "AvenirNext", size: 20.0)
+            timeLabel.font = UIFont(name: "Baskerville", size: 20.0)
             timeLabel.textAlignment = .right
             timeLabel.textColor = UIColor.white
             gameView.addSubview(timeLabel)
